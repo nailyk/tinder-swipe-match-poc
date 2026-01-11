@@ -36,8 +36,8 @@ A proof-of-concept simulation of Tinder-style swiping and matching, built using 
 
    ```bash
    go mod tidy
-   go build -o tinder
-   ./tinder -redis localhost:6379 -users 100 -swipes 1000
+   go build -o bin/tinder
+   ./bin/tinder -redis localhost:6379 -users 100 -swipes 1000
    ```
 
    ### CLI Flags
@@ -94,7 +94,7 @@ go test -v
 ```
 
 Ensure Redis is running locally (`localhost:6379`) before executing tests.
-
+   
 ---
 
 ## 📁 Project Structure

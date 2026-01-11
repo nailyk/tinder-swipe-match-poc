@@ -27,13 +27,13 @@ func randFloat64() float64 {
 
 func runSwipesSimulation(tinder *TinderService, numUsers, numSwipes int) {
 	users := make([]string, numUsers)
-	for i := 0; i < numUsers; i++ {
+	for i := range numUsers {
 		users[i] = fmt.Sprintf("user%d", i+1)
 	}
 
 	var wg sync.WaitGroup
 
-	for i := 0; i < numSwipes; i++ {
+	for range numSwipes {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
